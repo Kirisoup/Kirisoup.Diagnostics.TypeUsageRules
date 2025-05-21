@@ -26,5 +26,4 @@ public sealed partial class Analyzer : DiagnosticAnalyzer
 				Name: nameof(NoNewAttribute),
 				ContainingAssembly.Name: THIS
 			});
-
 }
