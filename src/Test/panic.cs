@@ -1,4 +1,4 @@
-using Kirisoup.Diagnostics.PreventDefault;
+using Kirisoup.Diagnostics.TypeUsageRules;
 
 _ = new Bar();
 _ = (Bar)new();
@@ -10,8 +10,8 @@ _ = (Bar)default;
 // _ = default(Foo);
 // _ = (Foo)default;
 
-[PreventDefault]
-[PreventDefaultCtor]
+[NoDefault]
+[NoNew]
 readonly struct Foo;
 
 readonly struct Bar;

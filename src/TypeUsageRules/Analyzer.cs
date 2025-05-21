@@ -9,7 +9,7 @@ namespace Kirisoup.Diagnostics.TypeUsageRules;
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
 public sealed partial class Analyzer : DiagnosticAnalyzer
 {
-	private const string THIS = "Kirisoup.Diagnostics.PreventDefault";
+	private const string THIS = "Kirisoup.Diagnostics.TypeUsageRules";
 
 	public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => [
 		noDefault,
