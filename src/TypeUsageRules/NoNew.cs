@@ -16,9 +16,11 @@ public sealed partial class Analyzer : DiagnosticAnalyzer
     private static void AnalyzeNew(SyntaxNodeAnalysisContext context) => Analyze(
 		context, noNew,
 		static context => context.Node switch {
-				ObjectCreationExpressionSyntax expr => 
-						context.SemanticModel.GetTypeInfo(expr, context.CancellationToken).Type,
-				ImplicitObjectCreationExpressionSyntax expr => 
+				ObjectCreationExpressionSyntax expr
+					when expr.ArgumentList?.Arguments.Count is not > 0 => 
+					context.SemanticModel.GetTypeInfo(expr, context.CancellationToken).Type,
+				ImplicitObjectCreationExpressionSyntax { ArgumentList.Arguments.Count: not > 0 } expr
+					when expr.ArgumentList?.Arguments.Count is not > 0 => 
 					context.SemanticModel.GetTypeInfo(expr, context.CancellationToken).ConvertedType,
 				_ => null
 			},

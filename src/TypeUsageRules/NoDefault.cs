@@ -12,7 +12,6 @@ public sealed partial class Analyzer : DiagnosticAnalyzer
 		category: "Usage",
 		defaultSeverity: DiagnosticSeverity.Error,
 		isEnabledByDefault: true);
-
     private static void AnalyzeDefault(SyntaxNodeAnalysisContext context) => Analyze(
 		context, noDefault,
 		static context => context.Node switch {

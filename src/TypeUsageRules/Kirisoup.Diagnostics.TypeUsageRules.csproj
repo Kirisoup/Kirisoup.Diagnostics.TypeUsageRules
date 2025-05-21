@@ -10,7 +10,7 @@
 		<AssemblyName>$(RootNamespace)</AssemblyName>
 		<PackageId>$(RootNamespace)</PackageId>
 
-		<Version>1.1.1</Version>
+		<Version>1.1.2</Version>
 		<Authors>Kirisoup</Authors>
 		<Description>Allow preventing specified struct from being initiallized by its default value</Description>
 
