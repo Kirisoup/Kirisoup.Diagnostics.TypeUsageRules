@@ -10,7 +10,7 @@ public sealed partial class Analyzer : DiagnosticAnalyzer
 		title: "Prevent the use of default value of struct",
 		messageFormat: "Struct {0} should not be initiallized with default value",
 		category: "Usage",
-		defaultSeverity: DiagnosticSeverity.Error,
+		defaultSeverity: DiagnosticSeverity.Warning,
 		isEnabledByDefault: true);
     private static void AnalyzeDefault(SyntaxNodeAnalysisContext context) => Analyze(
 		context, noDefault,

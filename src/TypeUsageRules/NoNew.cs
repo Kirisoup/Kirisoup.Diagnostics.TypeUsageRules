@@ -10,7 +10,7 @@ public sealed partial class Analyzer : DiagnosticAnalyzer
 		title: "Prevent the use of default constructor of struct",
 		messageFormat: "Struct {0} should not be initiallized with the default constructor",
 		category: "Usage",
-		defaultSeverity: DiagnosticSeverity.Error,
+		defaultSeverity: DiagnosticSeverity.Warning,
 		isEnabledByDefault: true);
 
     private static void AnalyzeNew(SyntaxNodeAnalysisContext context) => Analyze(
