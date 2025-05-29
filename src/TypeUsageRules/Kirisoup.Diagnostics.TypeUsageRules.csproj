@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net48</TargetFramework>
+		<TargetFrameworks>net48;net6.0</TargetFrameworks>
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -10,7 +10,7 @@
 		<AssemblyName>$(RootNamespace)</AssemblyName>
 		<PackageId>$(RootNamespace)</PackageId>
 
-		<Version>1.1.3</Version>
+		<Version>1.1.4</Version>
 		<Authors>Kirisoup</Authors>
 		<Description>Allow preventing specified struct from being initiallized by its default value</Description>
 
