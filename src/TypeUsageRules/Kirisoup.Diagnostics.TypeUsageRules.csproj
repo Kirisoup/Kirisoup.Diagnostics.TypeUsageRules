@@ -10,7 +10,7 @@
 		<AssemblyName>$(RootNamespace)</AssemblyName>
 		<PackageId>$(RootNamespace)</PackageId>
 
-		<Version>1.1.4</Version>
+		<Version>1.1.5</Version>
 		<Authors>Kirisoup</Authors>
 		<Description>Allow preventing specified struct from being initiallized by its default value</Description>
 
@@ -29,7 +29,7 @@
 		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net60'">
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
 		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 	</ItemGroup>
 
